@@ -1,5 +1,5 @@
 # teensy guitar audio sheild eurorack adapter and breakout pcb
-printed circuit board design to integrate teensy guitar audio pro shield
+printed circuit board design to integrate teensy microcontroller board, teensy guitar audio pro shield and eurorack.
 
 # breakouts 
 * st7735 oled display 
