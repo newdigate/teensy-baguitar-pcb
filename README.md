@@ -1,4 +1,4 @@
-# teensy baguitar pcb
+# teensy guitar audio sheild eurorack adapter and breakout pcb
 printed circuit board design to integrate teensy guitar audio pro shield
 
 # breakouts 
