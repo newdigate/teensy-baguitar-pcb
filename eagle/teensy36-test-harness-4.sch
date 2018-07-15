@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.1">
+<eagle version="8.7.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2124,6 +2124,12 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="JTFT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="&quot;" package3d_urn="urn:adsk.eagle:package:38138/1"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="JMIDI" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="&quot;" package3d_urn="urn:adsk.eagle:package:38138/1"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="JGND" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_08" device="&quot;" package3d_urn="urn:adsk.eagle:package:38138/1"/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2145,6 +2151,12 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <instance part="JTFT" gate="G$1" x="424.18" y="96.52" rot="R180"/>
 <instance part="GND2" gate="1" x="396.24" y="104.14"/>
 <instance part="GND3" gate="1" x="289.56" y="-17.78"/>
+<instance part="JMIDI" gate="G$1" x="325.12" y="91.44" rot="R180"/>
+<instance part="GND6" gate="1" x="307.34" y="78.74"/>
+<instance part="GND7" gate="1" x="302.26" y="81.28"/>
+<instance part="GND9" gate="1" x="297.18" y="83.82"/>
+<instance part="JGND" gate="G$1" x="340.36" y="91.44" rot="R180"/>
+<instance part="GND10" gate="1" x="335.28" y="71.12"/>
 </instances>
 <busses>
 </busses>
@@ -2210,12 +2222,64 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="289.56" y1="-15.24" x2="289.56" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="-12.7" x2="287.02" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="8"/>
+<wire x1="320.04" y1="81.28" x2="307.34" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="7"/>
+<wire x1="320.04" y1="83.82" x2="302.26" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="6"/>
+<wire x1="320.04" y1="86.36" x2="297.18" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JGND" gate="G$1" pin="1"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="335.28" y1="99.06" x2="335.28" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="JGND" gate="G$1" pin="8"/>
+<junction x="335.28" y="81.28"/>
+<wire x1="335.28" y1="96.52" x2="335.28" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="93.98" x2="335.28" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="91.44" x2="335.28" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="88.9" x2="335.28" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="86.36" x2="335.28" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="83.82" x2="335.28" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="81.28" x2="335.28" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="JGND" gate="G$1" pin="7"/>
+<junction x="335.28" y="83.82"/>
+<pinref part="JGND" gate="G$1" pin="6"/>
+<junction x="335.28" y="86.36"/>
+<pinref part="JGND" gate="G$1" pin="5"/>
+<junction x="335.28" y="88.9"/>
+<pinref part="JGND" gate="G$1" pin="4"/>
+<junction x="335.28" y="91.44"/>
+<pinref part="JGND" gate="G$1" pin="3"/>
+<junction x="335.28" y="93.98"/>
+<pinref part="JGND" gate="G$1" pin="2"/>
+<junction x="335.28" y="96.52"/>
+<junction x="335.28" y="99.06"/>
+</segment>
 </net>
 <net name="3V3" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="3V3_LO"/>
 <wire x1="429.26" y1="33.02" x2="370.84" y2="33.02" width="0.1524" layer="91"/>
 <label x="429.26" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="3V3"/>
+<wire x1="330.2" y1="2.54" x2="317.5" y2="2.54" width="0.1524" layer="91"/>
+<label x="317.5" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="3"/>
+<wire x1="320.04" y1="93.98" x2="307.34" y2="93.98" width="0.1524" layer="91"/>
+<label x="307.34" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="T4" class="0">
@@ -2429,6 +2493,11 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="419.1" y1="86.36" x2="381" y2="86.36" width="0.1524" layer="91"/>
 <junction x="381" y="86.36"/>
 </segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="4"/>
+<wire x1="320.04" y1="91.44" x2="307.34" y2="91.44" width="0.1524" layer="91"/>
+<label x="307.34" y="91.44" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="AGND" class="0">
 <segment>
@@ -2460,6 +2529,11 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="287.02" y1="-10.16" x2="297.18" y2="-10.16" width="0.1524" layer="91"/>
 <label x="297.18" y="-10.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="1"/>
+<wire x1="320.04" y1="99.06" x2="307.34" y2="99.06" width="0.1524" layer="91"/>
+<label x="307.34" y="99.06" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MIDI_TX" class="0">
 <segment>
@@ -2471,6 +2545,11 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="JDIO" gate="G$1" pin="15"/>
 <wire x1="271.78" y1="-12.7" x2="261.62" y2="-12.7" width="0.1524" layer="91"/>
 <label x="261.62" y="-12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="2"/>
+<wire x1="320.04" y1="96.52" x2="307.34" y2="96.52" width="0.1524" layer="91"/>
+<label x="307.34" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="T29" class="0">
@@ -2591,6 +2670,18 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="JDIO" gate="G$1" pin="12"/>
 <wire x1="287.02" y1="-7.62" x2="297.18" y2="-7.62" width="0.1524" layer="91"/>
 <label x="297.18" y="-7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AREF" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="AREF"/>
+<wire x1="360.68" y1="55.88" x2="360.68" y2="68.58" width="0.1524" layer="91"/>
+<label x="360.68" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JMIDI" gate="G$1" pin="5"/>
+<wire x1="320.04" y1="88.9" x2="309.88" y2="88.9" width="0.1524" layer="91"/>
+<label x="309.88" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
